@@ -1,69 +1,46 @@
-# Polyglot Microfrontends navbar
+# Getting Started with Create React App
 
-[![CircleCI](https://circleci.com/gh/polyglot-microfrontends/navbar.svg?style=svg)](https://circleci.com/gh/polyglot-microfrontends/navbar)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## What is this?
+## Available Scripts
 
-This is an example microfrontend repo demonstrating how to use [single-spa](https://single-spa.js.org). You can see the code running at https://polyglot.microfrontends.app.
+In the project directory, you can run:
 
-## How does it work?
+### `yarn start`
 
-[Full article](https://single-spa.js.org/docs/recommended-setup)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-This repository is a javascript project that creates a javascript bundle that is an in-browser javascript module (explanation on [youtube](https://www.youtube.com/watch?v=Jxqiu6pdMSU&list=PLLUD8RtHvsAOhtHnyGx57EYXoaNsxGrTU&index=2) / [bilibili](https://www.bilibili.com/video/av83498486/)). The currently deployed version of the in-browser module can be seen at https://polyglot.microfrontends.app/importmap.json.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-This project uses [AngularJS 1](https://angularjs.org) and uses gulp.
+### `yarn test`
 
-Whenever a pull request is merged to master, [CircleCI builds and deploys the project](https://circleci.com/gh/polyglot-microfrontends/navbar). The ["workflows" view](https://circleci.com/gh/polyglot-microfrontends/workflows) (pictured below) can be seen if you are logged into CircleCI. Deployments for this in-browser module are completely independent of deployments for any other module.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-![image](https://user-images.githubusercontent.com/5524384/75210801-5ba02700-573f-11ea-8064-46af165cba0a.png)
+### `yarn build`
 
-## Local development
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-[Full documentation](https://single-spa.js.org/docs/recommended-setup#local-development)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Tutorial video: [youtube](https://www.youtube.com/watch?v=vjjcuIxqIzY&list=PLLUD8RtHvsAOhtHnyGx57EYXoaNsxGrTU&index=4) / [bilibili](https://www.bilibili.com/video/av83617789/)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-There are two ways to do local development. It is preferred to do one module at a time, whenever possible.
+### `yarn eject`
 
-### One module at a time
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-```sh
-cd navbar
-yarn install
-yarn start --https
-```
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Note that the port defaults to 8080, but may change if 8080 is unavailable. Go to https://localhost:8080/polyglot-mf-navbar.js and verify that you are able to load the file without any SSL problems. To solve SSL problems, see [these instructions](https://improveandrepeat.com/2016/09/allowing-self-signed-certificates-on-localhost-with-chrome-and-firefox/).
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Now, go to https://polyglot.microfrontends.app. In the browser console, run the following:
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-```js
-localStorage.setItem("devtools", true);
-```
+## Learn More
 
-Refresh the page. Click on the tan / beige rectangle:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-![image](https://user-images.githubusercontent.com/5524384/75211359-e46b9280-5740-11ea-80bb-974846df414b.png)
-
-Set an [import map override](https://github.com/joeldenning/import-map-overrides/) to `8080`.
-
-![image](https://user-images.githubusercontent.com/5524384/75211553-7e333f80-5741-11ea-97d6-d3d86ffd1826.png)
-
-Refresh the page. Your local code for this module will now be running on https://polyglot.microfrontends.app. You may make changes locally and refresh the page to see them.
-
-### All modules together
-
-Run the root-config project locally:
-
-```
-cd root-config
-yarn install
-yarn start
-```
-
-Now follow the steps above for "One module at a time" for each of the modules you wish to work on.
-
-## Adapting for your organization
-
-Feel free to fork and modify any files you would like when doing a proof of concept for your organization. When it's time to actually create / adapt your organization's projects, consider using [create-single-spa](https://single-spa.js.org/docs/create-single-spa) instead of forking this repository.
+To learn React, check out the [React documentation](https://reactjs.org/).
